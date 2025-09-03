@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """
-Script per generare una versione stampabile della presentazione RH Corso Venezia
+Script per generare una versione stampabile della presentazione Partnership Marrone-Iglu-Italfrigo
 Questo script combina tutti i moduli HTML e genera un PDF ottimizzato per la stampa
 """
 
@@ -203,7 +203,7 @@ def main():
         <html>
         <head>
             <meta charset="UTF-8">
-            <title>RH Corso Venezia - Presentazione Stampabile</title>
+            <title>Partnership Marrone-Iglu-Italfrigo - Presentazione Stampabile</title>
             <style>
                 body {
                     font-family: Arial, sans-serif;
@@ -291,14 +291,14 @@ def main():
                     size: A4;
                     margin: 2cm;
                     @bottom-center {
-                        content: "RH Corso Venezia - " counter(page) " di " counter(pages);
+                        content: "Partnership Marrone-Iglu-Italfrigo - " counter(page) " di " counter(pages);
                     }
                 }
             </style>
         </head>
         <body>
             <div class="cover-page">
-                <h1>RH Corso Venezia</h1>
+                <h1>Partnership Marrone-Iglu-Italfrigo</h1>
         """
         
         # Aggiungi il sottotitolo in base alla lingua
@@ -364,9 +364,9 @@ def main():
     
         # Chiudi il documento HTML
         if lingua == 'it':
-            footer_text = "© 2025 - Presentazione creata per RH Corso Venezia"
+            footer_text = "© 2025 - Presentazione creata per Partnership Marrone-Iglu-Italfrigo"
         else:
-            footer_text = "© 2025 - Presentation created for RH Corso Venezia"
+            footer_text = "© 2025 - Presentation created for Partnership Marrone-Iglu-Italfrigo"
             
         combined_html += f"""
             <div class="footer">
@@ -480,6 +480,6 @@ def main():
     stampa_colorato(f"Tempo impiegato: {end_time - start_time:.2f} secondi", "ciano")
 
 if __name__ == "__main__":
-    stampa_colorato("=== Generazione PDF Presentazione RH Corso Venezia ===", "magenta")
+    stampa_colorato("=== Generazione PDF Presentazione Partnership Marrone-Iglu-Italfrigo ===", "magenta")
     main()
     stampa_colorato("\nGenerazione completata con successo!", "verde")

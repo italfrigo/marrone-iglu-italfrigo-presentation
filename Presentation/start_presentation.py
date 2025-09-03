@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Script per avviare automaticamente la presentazione RH Corso Venezia.
+Script per avviare automaticamente la presentazione Partnership Marrone-Iglu-Italfrigo.
 Avvia un server web locale e apre il browser predefinito.
 Chiude automaticamente eventuali processi che utilizzano già la porta.
 """
@@ -282,7 +282,7 @@ def start_server():
         print_colored("\nServer terminato dall'utente", "yellow")
 
 if __name__ == "__main__":
-    print_colored("=== Avvio Presentazione RH Corso Venezia ===", "green")
+    print_colored("=== Avvio Presentazione Partnership Marrone-Iglu-Italfrigo ===", "green")
     
     # Verifica se la porta è già in uso
     if is_port_in_use(PORT):

@@ -51,13 +51,13 @@ except Exception as e:
 
 elements.append(Spacer(1, 20))
 elements.append(Paragraph("OFFERTA TECNICO-ECONOMICA", styles['Titolo']))
-elements.append(Paragraph("RH Corso Venezia", styles['Sottotitolo']))
+elements.append(Paragraph("Partnership Marrone-Iglu-Italfrigo", styles['Sottotitolo']))
 elements.append(Spacer(1, 20))
 
 # Informazioni cliente
 elements.append(Paragraph("Informazioni Cliente:", styles['Intestazione']))
 data = [
-    ["Cliente:", "RH Corso Venezia"],
+    ["Cliente:", "Partnership Marrone-Iglu-Italfrigo"],
     ["Indirizzo:", "Corso Venezia, Milano"],
     ["Contatto:", "info@rhcorsovenezia.it"],
     ["Data Offerta:", "1 Maggio 2025"]
@@ -76,7 +76,7 @@ elements.append(Spacer(1, 20))
 # Descrizione del progetto
 elements.append(Paragraph("Descrizione del Progetto:", styles['Intestazione']))
 elements.append(Paragraph("""
-Il progetto prevede la realizzazione di un impianto di refrigerazione completo per la cucina del ristorante RH Corso Venezia.
+Il progetto prevede la realizzazione di un impianto di refrigerazione completo per cucine professionali.
 L'impianto sarà progettato secondo i più alti standard qualitativi, utilizzando componenti di prima scelta e tecnologie all'avanguardia.
 """, styles['Normale']))
 elements.append(Spacer(1, 10))
@@ -144,7 +144,7 @@ elements.append(Spacer(1, 30))
 elements.append(Paragraph("Per accettazione:", styles['Normale']))
 elements.append(Spacer(1, 20))
 elements.append(Paragraph("_________________________", styles['Normale']))
-elements.append(Paragraph("RH Corso Venezia", styles['Normale']))
+elements.append(Paragraph("Partnership Marrone-Iglu-Italfrigo", styles['Normale']))
 
 # Generazione del PDF
 doc.build(elements)
