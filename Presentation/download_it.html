@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Download Presentazione Italiana</title>
+    <script>
+        // Rileva se siamo su GitHub Pages
+        var isGitHubPages = window.location.hostname.includes('github.io');
+        var pdfPath;
+        
+        if (isGitHubPages) {
+            // Percorso assoluto per GitHub Pages
+            pdfPath = 'https://italfrigo.github.io/marrone-iglu-italfrigo-presentation/Presentation/downloads/RH_Corso_Venezia_Presentazione_IT.pdf';
+        } else {
+            // Percorso relativo per ambiente locale
+            pdfPath = 'downloads/RH_Corso_Venezia_Presentazione_IT.pdf';
+        }
+        
+        // Reindirizza al PDF
+        window.location.href = pdfPath;
+    </script>
+</head>
+<body>
+    <p>Reindirizzamento al download della presentazione in italiano...</p>
+    <p>Se non vieni reindirizzato automaticamente, <a id="pdfLink" href="#">clicca qui</a>.</p>
+    
+    <script>
+        // Aggiorna anche il link manuale
+        document.getElementById('pdfLink').href = pdfPath;
+    </script>
+</body>
+</html>

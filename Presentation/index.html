@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Partnership Marrone-Iglu-Italfrigo - Presentazione</title>
+    
+    <!-- Reveal.js CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/theme/black.min.css">
+    
+    <!-- Font Awesome per le icone -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <!-- CSS personalizzato -->
+    <link rel="stylesheet" href="css/custom.css">
+    
+    <style>
+        /* Reset completo per evitare barre orizzontali */
+        html, body, div, section {
+            max-width: 100vw !important;
+            overflow-x: hidden !important;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow-x: hidden !important;
+        }
+        
+        /* Regole specifiche per Reveal.js */
+        .reveal, .reveal .slides, .reveal .slides section, .reveal .slides section > div {
+            overflow-x: hidden !important;
+            max-width: 100vw !important;
+            width: 100% !important;
+        }
+        
+        /* Stile per il messaggio di blocco mobile */
+        #mobile-blocker {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            z-index: 9999;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        #mobile-blocker h1 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        
+        #mobile-blocker p {
+            color: #555;
+            font-size: 16px;
+            line-height: 1.5;
+            max-width: 80%;
+            margin: 0 auto 30px auto;
+        }
+        
+        #mobile-blocker img {
+            max-width: 80%;
+            margin-bottom: 30px;
+        }
+        
+        /* Stili per i pulsanti di selezione lingua */
+        .language-selector {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+            gap: 20px;
+        }
+        
+        .language-btn {
+            padding: 10px 20px;
+            background-color: #f5f5f5;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            color: #333;
+            transition: all 0.3s ease;
+        }
+        
+        .language-btn:hover, .language-btn.active {
+            background-color: #e0e0e0;
+            border-color: #aaa;
+        }
+        
+        .language-content {
+            display: none;
+        }
+        
+        .language-content.active {
+            display: block;
+        }
+        
+        /* Stili per migliorare la visualizzazione su mobile */
+        @media only screen and (max-width: 768px) {
+            /* Abilita lo scorrimento su tutte le slide */
+            .reveal .slides section {
+                height: auto !important;
+                overflow-y: auto !important;
+                min-height: 100vh !important;
+                padding: 15px !important;
+            }
+            
+            /* Migliora le dimensioni dei testi per mobile */
+            .reveal h1 {
+                font-size: 1.8em !important;
+                margin-bottom: 15px !important;
+                line-height: 1.2 !important;
+            }
+            
+            .reveal h2 {
+                font-size: 1.5em !important;
+                margin-bottom: 12px !important;
+                line-height: 1.3 !important;
+            }
+            
+            .reveal h3 {
+                font-size: 1.2em !important;
+                margin-bottom: 10px !important;
+                line-height: 1.3 !important;
+            }
+            
+            .reveal p, .reveal li {
+                font-size: 0.9em !important;
+                line-height: 1.5 !important;
+                margin-bottom: 8px !important;
+            }
+            
+            /* Riduce le dimensioni dell'header */
+            .header {
+                height: 30px !important;
+                z-index: 1000 !important;
+            }
+            
+            .header-logo {
+                height: 20px !important;
+                margin: 0 3px !important;
+            }
+            
+            /* Migliora la visualizzazione delle gallerie su mobile */
+            [style*="display: flex"] {
+                flex-direction: column !important;
+                gap: 15px !important;
+            }
+            
+            [style*="flex: 1"] {
+                min-width: 100% !important;
+                margin-bottom: 15px !important;
+                flex: none !important;
+            }
+            
+            /* Migliora i grid layout su mobile */
+            [style*="display: grid"] {
+                display: block !important;
+            }
+            
+            [style*="grid-template-columns"] > div {
+                margin-bottom: 15px !important;
+            }
+            
+            /* Forza lo scorrimento su tutti i contenitori */
+            .reveal .slides > section, 
+            .reveal .slides > section > section {
+                top: 0 !important;
+                transform: none !important;
+                padding: 10px !important;
+            }
+            
+            /* Forza lo scorrimento su tutti i div con altezza fissa */
+            div[style*="height:"], div[style*="height: "] {
+                height: auto !important;
+                min-height: auto !important;
+                max-height: none !important;
+            }
+            
+            /* Abilita lo scorrimento su tutti i div con overflow nascosto */
+            div[style*="overflow:"], div[style*="overflow: "] {
+                overflow: visible !important;
+                overflow-y: visible !important;
+            }
+            
+            /* Riduce gli spazi tra gli elementi */
+            div[style*="gap:"], div[style*="gap: "] {
+                gap: 8px !important;
+            }
+            
+            div[style*="padding:"], div[style*="padding: "] {
+                padding: 10px !important;
+            }
+            
+            /* Converte tutte le colonne in layout a singola colonna */
+            div[style*="columns:"], div[style*="columns: "] {
+                columns: 1 !important;
+            }
+            
+            /* Migliora la navigazione touch */
+            .reveal .controls {
+                bottom: 20px !important;
+                right: 20px !important;
+            }
+            
+            .reveal .progress {
+                height: 6px !important;
+            }
+            
+            /* Ottimizza le immagini e i contenuti multimediali */
+            .reveal img, .reveal video {
+                max-width: 100% !important;
+                height: auto !important;
+                margin: 10px 0 !important;
+            }
+            
+            /* Migliora la leggibilità dei bottoni e link */
+            .reveal a, .reveal button {
+                padding: 12px 16px !important;
+                margin: 8px 4px !important;
+                font-size: 1em !important;
+                min-height: 44px !important;
+                display: inline-block !important;
+            }
+            
+            /* Riduce le dimensioni delle immagini */
+            img {
+                max-width: 100% !important;
+                height: auto !important;
+            }
+            
+            /* Aumenta la leggibilità dei testi su sfondi */
+            [style*="background-image"] {
+                background-size: cover !important;
+                background-position: center !important;
+            }
+            
+            [style*="background-image"] * {
+                text-shadow: 0 0 5px rgba(0,0,0,0.8) !important;
+            }
+        }
+        
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: white;
+            padding: 5px 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 60px; /* Altezza fissa per la barra di navigazione */
+        }
+        
+        .header-logo {
+            margin: 0 20px;
+            height: 50px; /* Altezza aumentata per i loghi */
+            display: flex;
+            align-items: center;
+        }
+        
+        .header-logo img {
+            max-height: 100%;
+            max-width: 100%;
+            padding: 5px;
+            background-color: white;
+            border-radius: 5px;
+            object-fit: contain;
+        }
+        
+        .reveal {
+            font-family: 'Arial', sans-serif;
+            padding-top: 70px; /* Spazio aumentato per l'header */
+            height: calc(100vh - 70px); /* Altezza calcolata per evitare overflow */
+            overflow: hidden;
+            width: 100%;
+            max-width: 100%;
+        }
+        
+        /* Stili generali per tutte le slide eccetto l'indice */
+        .reveal section:not(:nth-child(2)) h1 {
+            font-size: 1.5em;
+            margin-bottom: 0.5em;
+        }
+        
+        .reveal section:not(:nth-child(2)) h2 {
+            font-size: 1.2em;
+            margin-bottom: 0.4em;
+        }
+        
+        .reveal section:not(:nth-child(2)) h3 {
+            font-size: 1.1em;
+            margin-bottom: 0.3em;
+        }
+        
+        .reveal section:not(:nth-child(2)) p, 
+        .reveal section:not(:nth-child(2)) li {
+            font-size: 0.8em;
+            line-height: 1.3;
+        }
+        
+        /* Stili specifici per l'indice (seconda slide) */
+        .reveal section:nth-child(2) h1 {
+            font-size: 1.8em;
+            margin-bottom: 0.5em;
+        }
+        
+        .reveal section:nth-child(2) h2 {
+            font-size: 1.5em;
+            margin-bottom: 0.5em;
+        }
+        
+        .reveal section:nth-child(2) h3 {
+            font-size: 1.3em;
+            margin-bottom: 0.3em;
+        }
+        
+        .reveal section:nth-child(2) p, 
+        .reveal section:nth-child(2) li {
+            font-size: 0.9em;
+            line-height: 1.4;
+        }
+        
+        .reveal ul, .reveal ol {
+            display: block;
+            margin-left: 1em;
+        }
+        
+        .reveal .slides {
+            text-align: left;
+            height: 100%;
+        }
+        
+        .reveal .slides section {
+            height: 100%;
+            padding: 80px 20px 20px 20px; /* Aumentato il padding superiore a 80px */
+            box-sizing: border-box;
+            overflow-y: scroll; /* Barra verticale sempre visibile */
+            overflow-x: hidden !important; /* Nascondi barra orizzontale */
+            margin-top: 0;
+            width: 100%;
+            max-width: 100%;
+        }
+        
+        /* Stili per le barre di scorrimento - solo verticali */
+        ::-webkit-scrollbar {
+            width: 10px; /* Larghezza barra verticale */
+            height: 0 !important; /* Nessuna barra orizzontale */
+        }
+        
+        /* Nasconde completamente le barre orizzontali */
+        ::-webkit-scrollbar:horizontal {
+            display: none !important;
+        }
+        
+        /* Stili per Firefox */
+        * {
+            scrollbar-width: thin;
+            scrollbar-color: rgba(100, 100, 100, 0.5) rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Forza l'assenza di barre orizzontali */
+        .reveal .slides section > div {
+            overflow-x: hidden !important;
+            max-width: 100% !important;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: rgba(100, 100, 100, 0.5);
+            border-radius: 5px;
+            border: 2px solid transparent;
+            background-clip: padding-box;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(100, 100, 100, 0.7);
+            border: 2px solid transparent;
+            background-clip: padding-box;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        
+        .reveal .controls {
+            bottom: 20px;
+            right: 20px;
+        }
+        
+        .reveal .controls .navigate-left, 
+        .reveal .controls .navigate-right, 
+        .reveal .controls .navigate-up, 
+        .reveal .controls .navigate-down {
+            opacity: 0.8;
+            transform: scale(1.5);
+        }
+        
+        .cover-slide {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: calc(100vh - 80px); /* Altezza calcolata per evitare overflow */
+            text-align: center;
+            padding: 0 20px;
+            box-sizing: border-box;
+            margin-top: -60px; /* Compensazione per il padding superiore della sezione */
+        }
+        
+        /* Stili per la cover slide (prima slide) */
+        .cover-title {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.9), 0 0 20px rgba(255, 255, 255, 0.5);
+            color: white;
+            font-weight: bold;
+            letter-spacing: 1px;
+            background-color: rgba(0, 0, 0, 0.4);
+            padding: 15px 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+        }
+        
+        .cover-subtitle {
+            font-size: 1.5em;
+            margin-bottom: 25px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9), 0 0 15px rgba(255, 255, 255, 0.4);
+            color: white;
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 10px 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+        
+        .cover-date {
+            font-size: 1.2em;
+            margin-top: 15px;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.9), 0 0 10px rgba(255, 255, 255, 0.3);
+            color: white;
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 8px 15px;
+            border-radius: 6px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+        }
+        
+        /* Rimosso navigation-hint che causava problemi di visualizzazione */
+        
+        .index-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+            max-height: calc(100vh - 180px);
+            overflow: hidden;
+            width: 100%;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .index-item {
+            background: linear-gradient(145deg, rgba(40, 40, 40, 0.8), rgba(20, 20, 20, 0.9));
+            padding: 10px 8px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            height: 100%;
+            min-height: 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 4px;
+        }
+        
+        .index-item:hover {
+            background: linear-gradient(145deg, rgba(60, 60, 60, 0.9), rgba(40, 40, 40, 1));
+            transform: translateY(-3px) scale(1.01);
+            border-color: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        }
+        
+        .index-item h3 {
+            margin: 0 0 15px 0;
+            color: #fff;
+            font-size: 0.15em;
+            text-align: center;
+            font-weight: bold;
+            text-shadow: none;
+            line-height: 1;
+            padding-top: 10px;
+        }
+        
+        .index-item p {
+            margin: 0;
+            color: #ccc;
+            font-size: 0.12em;
+            text-align: center;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+            line-height: 1;
+            padding-top: 0;
+            position: relative;
+            top: -5px;
+        }
+        
+        .index-item:hover p {
+            opacity: 1;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <!-- Blocco per dispositivi mobili, inizialmente nascosto -->
+    <div id="mobile-blocker" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: #fff; z-index: 9999; flex-direction: column; justify-content: center; align-items: center; padding: 20px; box-sizing: border-box;">
+        <div style="display: flex; justify-content: center; width: 100%; margin-bottom: 30px;">
+            <img id="logo-marrone-welcome" src="https://italfrigo.github.io/marrone-iglu-italfrigo-presentation/Presentation/assets/logos/marrone-logo.png" alt="Marrone Logo" style="max-height: 60px; margin-right: 15px;">
+            <img id="logo-italfrigo-welcome" src="https://italfrigo.github.io/marrone-iglu-italfrigo-presentation/Presentation/assets/logos/italfrigo-logo.png" alt="Italfrigo Logo" style="max-height: 60px; margin-right: 15px;">
+            <img id="logo-iglu-welcome" src="https://italfrigo.github.io/marrone-iglu-italfrigo-presentation/Presentation/assets/logos/iglu-logo.jpg" alt="IGLU Logo" style="max-height: 60px; margin-left: 10px;">
+        </div>
+        
+        <div class="language-selector">
+            <button class="language-btn active" onclick="changeLanguage('it')">Italiano</button>
+            <button class="language-btn" onclick="changeLanguage('en')">English</button>
+        </div>
+        
+        <!-- Contenuto in italiano -->
+        <div id="content-it" class="language-content active">
+            <h1 style="color: #333; font-size: 24px; margin-bottom: 20px;">Presentazione Partnership Marrone-Iglu-Italfrigo</h1>
+            <p style="color: #555; font-size: 16px; line-height: 1.5; max-width: 80%; margin: 0 auto 30px auto; text-align: center;">Questa presentazione è ottimizzata per la visualizzazione su computer desktop.<br>Per visualizzare la presentazione, accedi da un PC o un laptop.</p>
+            <p style="font-style: italic; font-size: 14px; color: #888;">Per informazioni: manuel.lazzaro@italfrigo.com</p>
+        </div>
+        
+        <!-- Contenuto in inglese -->
+        <div id="content-en" class="language-content">
+            <h1 style="color: #333; font-size: 24px; margin-bottom: 20px;">Marrone-Iglu-Italfrigo Partnership Presentation</h1>
+            <p style="color: #555; font-size: 16px; line-height: 1.5; max-width: 80%; margin: 0 auto 30px auto; text-align: center;">This presentation is optimized for desktop viewing.<br>To view the presentation, please access it from a PC or laptop.</p>
+            <p style="font-style: italic; font-size: 14px; color: #888;">For information: manuel.lazzaro@italfrigo.com</p>
+        </div>
+    </div>
+    <div class="header">
+        <div class="header-logo">
+            <img src="https://italfrigo.github.io/marrone-iglu-italfrigo-presentation/Presentation/assets/logos/italfrigo-logo.png" alt="Italfrigo Logo">
+        </div>
+        <div class="header-logo">
+            <img src="https://italfrigo.github.io/marrone-iglu-italfrigo-presentation/Presentation/assets/logos/marrone-logo.png" alt="Marrone Logo">
+        </div>
+        <div class="header-logo">
+            <img src="https://italfrigo.github.io/marrone-iglu-italfrigo-presentation/Presentation/assets/logos/iglu-logo.jpg" alt="IGLU Logo">
+        </div>
+    </div>
+
+    <div class="reveal">
+        <div class="slides">
+            <!-- Cover Slide -->
+            <section data-background="assets/images/cover-bg.jpg" data-background-size="cover">
+                <div class="cover-slide">
+                    <h1 class="cover-title language-it">Partnership Marrone-Iglu-Italfrigo</h1>
+                    <h1 class="cover-title language-en" style="display: none;">Marrone-Iglu-Italfrigo Partnership</h1>
+                    <h2 class="cover-subtitle language-it">Soluzioni Integrate per Cucine Professionali</h2>
+                    <h2 class="cover-subtitle language-en" style="display: none;">Integrated Solutions for Professional Kitchens</h2>
+                    <div class="navigation-hint language-it" style="margin-top: 30px; font-size: 1em; color: white; background-color: rgba(0, 0, 0, 0.5); padding: 10px 20px; border-radius: 30px; box-shadow: 0 0 15px rgba(0, 0, 0, 0.6); text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);">Usa le frecce per navigare</div>
+                    <div class="navigation-hint language-en" style="display: none; margin-top: 30px; font-size: 1em; color: white; background-color: rgba(0, 0, 0, 0.5); padding: 10px 20px; border-radius: 30px; box-shadow: 0 0 15px rgba(0, 0, 0, 0.6); text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);">Use arrows to navigate</div>
+                    
+                    <div class="cover-language-selector">
+                        <button class="language-btn active" onclick="changeLanguage('it')">
+                            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzIDIiPjxwYXRoIGZpbGw9IiMwMDkyNDYiIGQ9Ik0wIDBoMXYySDB6Ii8+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTEgMGgxdjJIMXoiLz48cGF0aCBmaWxsPSIjY2UyYjM3IiBkPSJNMiAwaDF2MkgyeiIvPjwvc3ZnPg==" alt="Italiano" class="flag-icon"> IT
+                        </button>
+                        <button class="language-btn" onclick="changeLanguage('en')">
+                            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjM1IDY1MCIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPg0KPGRlZnM+DQo8ZyBpZD0idW5pb24iPg0KPHVzZSB5PSItLjIxNiIgeGxpbms6aHJlZj0iI3g0Ii8+DQo8dXNlIHhsaW5rOmhyZWY9IiN4NCIvPg0KPHVzZSB5PSIuMjE2IiB4bGluazpocmVmPSIjczYiLz4NCjwvZz4NCjxnIGlkPSJ4NCI+DQo8dXNlIHhsaW5rOmhyZWY9IiNzNiIvPg0KPHVzZSB5PSIuMDU0IiB4bGluazpocmVmPSIjczUiLz4NCjx1c2UgeT0iLjEwOCIgeGxpbms6aHJlZj0iI3M2Ii8+DQo8dXNlIHk9Ii4xNjIiIHhsaW5rOmhyZWY9IiNzNSIvPg0KPC9nPg0KPGcgaWQ9InM1Ij4NCjx1c2UgeD0iLS4yNTIiIHhsaW5rOmhyZWY9IiNzdGFyIi8+DQo8dXNlIHg9Ii0uMTI2IiB4bGluazpocmVmPSIjc3RhciIvPg0KPHVzZSB4bGluazpocmVmPSIjc3RhciIvPg0KPHVzZSB4PSIuMTI2IiB4bGluazpocmVmPSIjc3RhciIvPg0KPHVzZSB4PSIuMjUyIiB4bGluazpocmVmPSIjc3RhciIvPg0KPC9nPg0KPGcgaWQ9InM2Ij4NCjx1c2UgeD0iLS4wNjMiIHhsaW5rOmhyZWY9IiNzNSIvPg0KPHVzZSB4PSIuMzE1IiB4bGluazpocmVmPSIjc3RhciIvPg0KPC9nPg0KPGcgaWQ9InN0YXIiPg0KPHVzZSB4bGluazpocmVmPSIjcHQiIHRyYW5zZm9ybT0ibWF0cml4KC0uODA5MDIgLS41ODc3OSAuNTg3NzkgLS44MDkwMiAwIDApIi8+DQo8dXNlIHhsaW5rOmhyZWY9IiNwdCIgdHJhbnNmb3JtPSJtYXRyaXgoLjMwOTAyIC0uOTUxMDYgLjk1MTA2IC4zMDkwMiAwIDApIi8+DQo8dXNlIHhsaW5rOmhyZWY9IiNwdCIvPg0KPHVzZSB4bGluazpocmVmPSIjcHQiIHRyYW5zZm9ybT0icm90YXRlKDcyKSIvPg0KPHVzZSB4bGluazpocmVmPSIjcHQiIHRyYW5zZm9ybT0icm90YXRlKDE0NCkiLz4NCjwvZz4NCjxwYXRoIGZpbGw9IiNmZmYiIGlkPSJwdCIgZD0iTS0uMTYyNSwwIDAtLjUgLjE2MjUsMHoiIHRyYW5zZm9ybT0ic2NhbGUoLjA2MTYpIi8+DQo8cGF0aCBmaWxsPSIjYmYwYTMwIiBpZD0ic3RyaXBlIiBkPSJtMCwwaDEyMzV2NTBoLTEyMzV6Ii8+DQo8L2RlZnM+DQo8cGF0aCBmaWxsPSIjZmZmIiBkPSJtMCwwaDEyMzV2NjUwaC0xMjM1eiIvPg0KPHVzZSB4bGluazpocmVmPSIjc3RyaXBlIi8+DQo8dXNlIHk9IjEwMCIgeGxpbms6aHJlZj0iI3N0cmlwZSIvPg0KPHVzZSB5PSIyMDAiIHhsaW5rOmhyZWY9IiNzdHJpcGUiLz4NCjx1c2UgeT0iMzAwIiB4bGluazpocmVmPSIjc3RyaXBlIi8+DQo8dXNlIHk9IjQwMCIgeGxpbms6aHJlZj0iI3N0cmlwZSIvPg0KPHVzZSB5PSI1MDAiIHhsaW5rOmhyZWY9IiNzdHJpcGUiLz4NCjx1c2UgeT0iNjAwIiB4bGluazpocmVmPSIjc3RyaXBlIi8+DQo8cGF0aCBmaWxsPSIjMDAyODY4IiBkPSJtMCwwaDQ5NHYzNTBoLTQ5NHoiLz4NCjx1c2UgeGxpbms6aHJlZj0iI3VuaW9uIiB0cmFuc2Zvcm09Im1hdHJpeCg2NTAgMCAwIDY1MCAyNDcgMTc1KSIvPg0KPC9zdmc+DQo=" alt="English" class="flag-icon"> EN
+                        </button>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Indice -->
+            <section data-background="https://www.marrone.it/wp-content/uploads/2018/03/custom-cooking.jpg" data-background-size="cover" data-background-opacity="0.4">
+                <!-- Versione italiana -->
+                <div class="language-it" style="padding: 10px; margin-bottom: 20px; text-align: center;">
+                    <h2 style="margin: 0 auto 10px auto; color: #fff; text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); font-size: 1.8em; background: linear-gradient(90deg, rgba(40, 40, 40, 0.8), rgba(20, 20, 20, 0.9)); padding: 12px 20px; border-radius: 10px; display: inline-block;">Indice della Presentazione</h2>
+                    <p style="margin: 5px auto 0 auto; font-size: 0.7em; color: #ddd; background-color: rgba(0, 0, 0, 0.4); padding: 5px 12px; border-radius: 15px; display: inline-block; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">Clicca su una sezione per navigare direttamente oppure naviga con le frecce</p>
+                </div>
+                
+                <!-- Versione inglese -->
+                <div class="language-en" style="padding: 10px; margin-bottom: 20px; text-align: center; display: none;">
+                    <h2 style="margin: 0 auto 10px auto; color: #fff; text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); font-size: 1.8em; background: linear-gradient(90deg, rgba(40, 40, 40, 0.8), rgba(20, 20, 20, 0.9)); padding: 12px 20px; border-radius: 10px; display: inline-block;">Presentation Index</h2>
+                    <p style="margin: 5px auto 0 auto; font-size: 0.7em; color: #ddd; background-color: rgba(0, 0, 0, 0.4); padding: 5px 12px; border-radius: 15px; display: inline-block; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">Click on a section to navigate directly or use the arrows</p>
+                </div>
+                
+                <div class="index-grid" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; padding: 0 20px; max-width: 1000px; margin: 0 auto;">
+                    <div class="index-item" onclick="Reveal.slide(2)" style="width: 180px; margin-bottom: 15px;">
+                        <div class="language-it" style="font-size: 0.4em; color: #fff; font-weight: bold; margin-bottom: 10px;">1. PARTNERSHIP</div>
+                        <div class="language-en" style="display: none; font-size: 0.4em; color: #fff; font-weight: bold; margin-bottom: 10px;">1. PARTNERSHIP</div>
+                        <div class="language-it" style="font-size: 0.3em; color: #ccc;">La forza della collaborazione</div>
+                        <div class="language-en" style="display: none; font-size: 0.3em; color: #ccc;">The power of collaboration</div>
+                    </div>
+                    
+                    <div class="index-item" onclick="Reveal.slide(3)" style="width: 180px; margin-bottom: 15px;">
+                        <div class="language-it" style="font-size: 0.4em; color: #fff; font-weight: bold; margin-bottom: 10px;">2. INTRODUZIONE</div>
+                        <div class="language-en" style="display: none; font-size: 0.4em; color: #fff; font-weight: bold; margin-bottom: 10px;">2. INTRODUCTION</div>
+                        <div class="language-it" style="font-size: 0.3em; color: #ccc;">Soluzioni integrate</div>
+                        <div class="language-en" style="display: none; font-size: 0.3em; color: #ccc;">Integrated solutions</div>
+                    </div>
+                    
+                    <div class="index-item" onclick="Reveal.slide(4)" style="width: 180px; margin-bottom: 15px;">
+                        <div class="language-it" style="font-size: 0.4em; color: #fff; font-weight: bold; margin-bottom: 10px;">3. MARRONE</div>
+                        <div class="language-en" style="display: none; font-size: 0.4em; color: #fff; font-weight: bold; margin-bottom: 10px;">3. MARRONE</div>
+                        <div class="language-it" style="font-size: 0.3em; color: #ccc;">Cucine Personalizzate</div>
+                        <div class="language-en" style="display: none; font-size: 0.3em; color: #ccc;">Custom Kitchens</div>
+                    </div>
+                    
+                    <div class="index-item" onclick="Reveal.slide(5)" style="width: 180px; margin-bottom: 15px;">
+                        <div class="language-it" style="font-size: 0.4em; color: #fff; font-weight: bold; margin-bottom: 10px;">4. IGLU</div>
+                        <div class="language-en" style="display: none; font-size: 0.4em; color: #fff; font-weight: bold; margin-bottom: 10px;">4. IGLU</div>
+                        <div class="language-it" style="font-size: 0.3em; color: #ccc;">Sistemi di Refrigerazione</div>
+                        <div class="language-en" style="display: none; font-size: 0.3em; color: #ccc;">Refrigeration Systems</div>
+                    </div>
+                    
+                    <div class="index-item" onclick="Reveal.slide(6)" style="width: 180px; margin-bottom: 15px;">
+                        <div class="language-it" style="font-size: 0.4em; color: #fff; font-weight: bold; margin-bottom: 10px;">5. ITALFRIGO</div>
+                        <div class="language-en" style="display: none; font-size: 0.4em; color: #fff; font-weight: bold; margin-bottom: 10px;">5. ITALFRIGO</div>
+                        <div class="language-it" style="font-size: 0.3em; color: #ccc;">Servizi d'eccellenza</div>
+                        <div class="language-en" style="display: none; font-size: 0.3em; color: #ccc;">Service excellence</div>
+                    </div>
+                    
+                    <div class="index-item" onclick="Reveal.slide(12)" style="width: 180px; margin-bottom: 15px;">
+                        <div class="language-it" style="font-size: 0.4em; color: #fff; font-weight: bold; margin-bottom: 10px;">6. CONTATTI</div>
+                        <div class="language-en" style="display: none; font-size: 0.4em; color: #fff; font-weight: bold; margin-bottom: 10px;">6. CONTACTS</div>
+                        <div class="language-it" style="font-size: 0.3em; color: #ccc;">Informazioni e riferimenti</div>
+                        <div class="language-en" style="display: none; font-size: 0.3em; color: #ccc;">Information and references</div>
+                    </div>
+                </div>
+                
+                <div style="position: absolute; bottom: 20px; left: 0; right: 0; text-align: center;">
+                    <!-- Suggerimento in italiano -->
+                    <div class="language-it" style="font-size: 0.7em; color: #ddd; background-color: rgba(0, 0, 0, 0.5); padding: 8px 15px; border-radius: 20px; display: inline-block; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); border: 1px solid rgba(255, 255, 255, 0.1);">
+                        <p style="margin: 0;">Suggerimento: Premi ESC per vedere tutte le slide, H per tornare alla home</p>
+                    </div>
+                    
+                    <!-- Suggerimento in inglese -->
+                    <div class="language-en" style="display: none; font-size: 0.7em; color: #ddd; background-color: rgba(0, 0, 0, 0.5); padding: 8px 15px; border-radius: 20px; display: inline-block; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); border: 1px solid rgba(255, 255, 255, 0.1);">
+                        <p style="margin: 0;">Tip: Press ESC to see all slides, H to return to home</p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Sezioni della presentazione -->
+            <section id="partnership">
+                <section data-external="modules/00_partnership.html" class="module-section"></section>
+            </section>
+            <section id="introduction">
+                <section data-external="modules/01_introduction.html" class="module-section"></section>
+            </section>
+            <section id="marrone">
+                <section data-external="modules/02_marrone.html" class="module-section"></section>
+            </section>
+            <section id="iglu">
+                <section data-external="modules/03_iglu.html" class="module-section"></section>
+            </section>
+            <section id="italfrigo">
+                <section data-external="modules/04_italfrigo.html" class="module-section"></section>
+            </section>
+            <section id="realization">
+                <section data-external="modules/06_realization.html" class="module-section"></section>
+            </section>
+            <section id="services">
+                <section data-external="modules/07_services.html" class="module-section"></section>
+            </section>
+            <section id="final">
+                <section data-external="modules/08_final.html" class="module-section"></section>
+            </section>
+            <section id="thanks">
+                <section data-external="modules/09_thanks.html" class="module-section"></section>
+            </section>
+        </div>
+    </div>
+
+    <!-- Reveal.js JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/markdown/markdown.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/notes/notes.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/highlight/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/zoom/zoom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/search/search.min.js"></script>
+    
+    <script>
+        // Rileva se siamo su GitHub Pages o in locale
+        var isGitHubPages = window.location.hostname.includes('github.io');
+        var basePath = isGitHubPages ? '/Partnership/Presentation/' : '/';
+        
+        // Funzione per correggere i percorsi delle immagini
+        function fixImagePaths() {
+            // Correggi i percorsi delle immagini nell'header
+            document.querySelectorAll('.header-logo img').forEach(function(img) {
+                var src = img.getAttribute('src');
+                if (isGitHubPages && !src.startsWith('/marrone-iglu-italfrigo-presentation/')) {
+                    img.setAttribute('src', '/marrone-iglu-italfrigo-presentation/Presentation/' + src);
+                }
+            });
+            
+            // Correggi i percorsi delle immagini nel mobile blocker
+            document.querySelectorAll('#mobile-blocker img').forEach(function(img) {
+                var src = img.getAttribute('src');
+                if (isGitHubPages && !src.startsWith('/marrone-iglu-italfrigo-presentation/')) {
+                    img.setAttribute('src', '/marrone-iglu-italfrigo-presentation/Presentation/' + src);
+                }
+            });
+            
+            // Correggi i percorsi delle immagini di sfondo
+            var coverSection = document.querySelector('section[data-background]');
+            if (coverSection) {
+                var bgImage = coverSection.getAttribute('data-background');
+                if (isGitHubPages && !bgImage.startsWith('/Partnership/')) {
+                    coverSection.setAttribute('data-background', '/Partnership/Presentation/' + bgImage);
+                }
+            }
+        }
+        
+        // Funzione per impostare i percorsi corretti dei loghi nel blocco mobile
+        function setCorrectLogoPaths() {
+            var isGitHub = window.location.hostname.includes('github.io');
+            var basePath = isGitHub ? 'https://italfrigo.github.io/marrone-iglu-italfrigo-presentation/Presentation/' : '';
+            
+            document.getElementById('logo-marrone').src = basePath + 'assets/logos/marrone-logo.png';
+            document.getElementById('logo-italfrigo').src = basePath + 'assets/logos/italfrigo-logo.png';
+            document.getElementById('logo-iglu').src = basePath + 'assets/logos/iglu-logo.jpg';
+        }
+        
+        // Variabile globale per la lingua corrente
+        var currentLanguage = 'it';
+        
+        // Controlla se c'è una preferenza di lingua salvata
+        if (localStorage.getItem('preferredLanguage')) {
+            currentLanguage = localStorage.getItem('preferredLanguage');
+        }
+        
+        // Funzione per cambiare lingua
+        function changeLanguage(lang) {
+            // Salva la lingua corrente
+            currentLanguage = lang;
+            localStorage.setItem('preferredLanguage', lang);
+            
+            // Nascondi tutti i contenuti linguistici specifici
+            document.querySelectorAll('.language-it, .language-en').forEach(function(element) {
+                element.style.display = 'none';
+            });
+            
+            // Mostra i contenuti della lingua selezionata
+            document.querySelectorAll('.language-' + lang).forEach(function(element) {
+                element.style.display = '';
+            });
+            
+            // Nascondi tutti i contenuti linguistici generici
+            document.querySelectorAll('.language-content').forEach(function(content) {
+                content.classList.remove('active');
+            });
+            
+            // Mostra il contenuto generico della lingua selezionata
+            var contentElement = document.getElementById('content-' + lang);
+            if (contentElement) {
+                contentElement.classList.add('active');
+            }
+            
+            // Aggiorna lo stato dei pulsanti
+            document.querySelectorAll('.language-btn').forEach(function(btn) {
+                btn.classList.remove('active');
+            });
+            
+            // Attiva il pulsante della lingua selezionata
+            var buttons = document.querySelectorAll('.language-btn[onclick="changeLanguage(\'' + lang + '\')"');
+            buttons.forEach(function(btn) {
+                btn.classList.add('active');
+            });
+            
+            // Aggiorna i percorsi dei moduli esterni
+            if (!isMobileDevice()) {
+                // Utilizziamo la nuova funzione ricorsiva loadExternalContent invece di updateModulePaths
+                loadExternalContent();
+            }
+        }
+        
+        // Funzione per ottenere il percorso del modulo in base alla lingua
+        function getModulePath(modulePath) {
+            if (currentLanguage === 'en') {
+                // Per la versione inglese, usa la cartella modules_en
+                return modulePath.replace('modules/', 'modules_en/');
+            }
+            return modulePath;
+        }
+        
+        // Funzione per aggiornare i percorsi dei moduli esterni
+        function updateModulePaths() {
+            // Seleziona tutte le sezioni esterne, incluse quelle annidate
+            const externalSections = document.querySelectorAll('section[data-external]');
+            
+            externalSections.forEach(section => {
+                const originalPath = section.getAttribute('data-external');
+                let newPath;
+                
+                if (currentLanguage === 'en') {
+                    // Per la versione inglese, usa la cartella modules_en
+                    newPath = originalPath.replace('modules/', 'modules_en/');
+                } else {
+                    // Per la versione italiana, usa la cartella modules
+                    newPath = originalPath.replace('modules_en/', 'modules/');
+                }
+                
+                // Aggiorna l'attributo data-external con il nuovo percorso
+                if (newPath !== originalPath) {
+                    section.setAttribute('data-external', newPath);
+                    
+                    // Ricarica il contenuto del modulo
+                    fetch(newPath)
+                        .then(response => {
+                            if (!response.ok) {
+                                // Se il file non esiste nella lingua selezionata, usa la versione italiana
+                                if (currentLanguage === 'en') {
+                                    return fetch(originalPath);
+                                }
+                                throw new Error('File non trovato: ' + newPath);
+                            }
+                            return response;
+                        })
+                        .then(response => response.text())
+                        .then(html => {
+                            // Aggiorna il contenuto del modulo
+                            section.innerHTML = html;
+                            
+                            // Cerca eventuali sezioni annidate con data-external e aggiorna anche quelle
+                            const nestedSections = section.querySelectorAll('section[data-external]');
+                            if (nestedSections.length > 0) {
+                                nestedSections.forEach(nestedSection => {
+                                    const nestedOriginalPath = nestedSection.getAttribute('data-external');
+                                    let nestedNewPath;
+                                    
+                                    if (currentLanguage === 'en') {
+                                        nestedNewPath = nestedOriginalPath.replace('modules/', 'modules_en/');
+                                    } else {
+                                        nestedNewPath = nestedOriginalPath.replace('modules_en/', 'modules/');
+                                    }
+                                    
+                                    if (nestedNewPath !== nestedOriginalPath) {
+                                        nestedSection.setAttribute('data-external', nestedNewPath);
+                                        
+                                        fetch(nestedNewPath)
+                                            .then(response => {
+                                                if (!response.ok) {
+                                                    if (currentLanguage === 'en') {
+                                                        return fetch(nestedOriginalPath);
+                                                    }
+                                                    throw new Error('File annidato non trovato: ' + nestedNewPath);
+                                                }
+                                                return response;
+                                            })
+                                            .then(response => response.text())
+                                            .then(nestedHtml => {
+                                                nestedSection.innerHTML = nestedHtml;
+                                            })
+                                            .catch(error => {
+                                                console.error('Errore nel caricamento del contenuto annidato:', error);
+                                            });
+                                    }
+                                });
+                            }
+                        })
+                        .catch(error => {
+                            console.error('Errore nel caricamento del contenuto esterno:', error);
+                        });
+                }
+            });
+        }
+        
+        // Rileva dispositivi mobili in modo affidabile
+        function isMobileDevice() {
+            // Metodo 1: Verifica tramite navigator.platform (più affidabile per iOS)
+            var iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
+            
+            // Metodo 2: Verifica tramite userAgent (più generale)
+            var mobileUA = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+            
+            // Metodo 3: Verifica per dispositivi touch
+            var touchDevice = ('ontouchstart' in window) || 
+                             (navigator.maxTouchPoints > 0) || 
+                             (navigator.msMaxTouchPoints > 0);
+            
+            // Metodo 4: Verifica dimensioni dello schermo
+            var smallScreen = window.innerWidth <= 768;
+            
+        }
+        
+        // Controlla se è un dispositivo mobile all'avvio (disabilitato)
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile blocker disabilitato - la presentazione è ora accessibile su mobile
+            document.getElementById('mobile-blocker').style.display = 'none';
+        });
+        
+        // Controlla anche al ridimensionamento della finestra (disabilitato)
+        window.addEventListener('resize', function() {
+            // Mobile blocker disabilitato - la presentazione rimane accessibile su mobile
+            document.getElementById('mobile-blocker').style.display = 'none';
+        });
+        
+        // Carica i contenuti esterni
+        function loadExternalContent() {
+            // Seleziona tutte le sezioni con attributo data-external
+            const externalSections = document.querySelectorAll('section[data-external]');
+            
+            // Funzione ricorsiva per caricare i contenuti esterni, inclusi quelli annidati
+            function loadSection(section) {
+                // Ottieni il percorso originale
+                let originalPath = section.getAttribute('data-external');
+                
+                // Normalizza il percorso per assicurarsi che sia nella forma corretta per la sostituzione
+                // Prima rimuoviamo qualsiasi riferimento a modules_en e lo convertiamo in modules
+                originalPath = originalPath.replace('modules_en/', 'modules/');
+                
+                // Poi applichiamo la lingua corrente
+                const path = currentLanguage === 'en' ? originalPath.replace('modules/', 'modules_en/') : originalPath;
+                
+                // Aggiorna l'attributo data-external con il nuovo percorso
+                section.setAttribute('data-external', path);
+                
+                // Forza la ricarica del contenuto aggiungendo un timestamp per evitare la cache
+                const cacheBuster = '?t=' + new Date().getTime();
+                const fetchPath = path + cacheBuster;
+                
+                return fetch(fetchPath)
+                    .then(response => {
+                        if (!response.ok) {
+                            // Se il file non esiste nella lingua selezionata, usa la versione italiana
+                            if (currentLanguage === 'en') {
+                                console.log('Fallback alla versione italiana per:', path);
+                                return fetch(originalPath + cacheBuster);
+                            }
+                            throw new Error('File non trovato: ' + path);
+                        }
+                        return response;
+                    })
+                    .then(response => response.text())
+                    .then(html => {
+                        // Correggi i percorsi delle immagini nel contenuto HTML se siamo su GitHub Pages
+                        if (isGitHubPages) {
+                            // Sostituisci i percorsi relativi delle immagini
+                            html = html.replace(/src="\.\.\/\//g, 'src="/Partnership/Presentation/');
+                        }
+                        
+                        // Aggiorna il contenuto della sezione
+                        section.innerHTML = html;
+                        
+                        // Correggi i percorsi delle immagini nei moduli caricati
+                        if (isGitHubPages) {
+                            section.querySelectorAll('img').forEach(function(img) {
+                                var src = img.getAttribute('src');
+                                if (src && src.startsWith('../')) {
+                                    img.setAttribute('src', '/Partnership/Presentation/' + src.substring(3));
+                                }
+                            });
+                        }
+                        
+                        // Applica la visualizzazione corretta per gli elementi con classi language-it e language-en
+                        section.querySelectorAll('.language-it, .language-en').forEach(function(element) {
+                            element.style.display = 'none';
+                        });
+                        section.querySelectorAll('.language-' + currentLanguage).forEach(function(element) {
+                            element.style.display = '';
+                        });
+                        
+                        // Cerca eventuali sezioni annidate con data-external
+                        const nestedSections = section.querySelectorAll('section[data-external]');
+                        if (nestedSections.length > 0) {
+                            // Carica ricorsivamente tutte le sezioni annidate
+                            const nestedPromises = Array.from(nestedSections).map(loadSection);
+                            return Promise.all(nestedPromises);
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Errore nel caricamento del contenuto esterno:', error);
+                    });
+            }
+            
+            // Carica tutte le sezioni di primo livello
+            const loadPromises = Array.from(externalSections).map(loadSection);
+            return Promise.all(loadPromises);
+        }
+
+        // Carica i contenuti esterni
+        loadExternalContent();
+
+        // Inizializza Reveal.js dopo un breve ritardo
+        setTimeout(function() {
+            Reveal.initialize({
+                hash: true,
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+                transition: 'slide',
+                touch: false, // Disabilitato per consentire lo scorrimento nativo
+                disableLayout: false,
+                embedded: false,
+                width: '100%',
+                height: '100%',
+                margin: 0,
+                minScale: 0.2,
+                maxScale: 2.0,
+                navigationMode: 'linear',
+                plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealZoom, RevealSearch ]
+            });
+
+            // Aggiungi la navigazione con tastiera
+            document.addEventListener('keydown', function(event) {
+                // Tasto 'h' per tornare alla home
+                if (event.key === 'h' || event.key === 'H') {
+                    Reveal.slide(0);
+                }
+                // Tasto '0' per andare all'indice
+                if (event.key === '0') {
+                    Reveal.slide(1);
+                }
+            });
+
+            // Forza il ridimensionamento per assicurarsi che tutto sia visibile
+            window.dispatchEvent(new Event('resize'));
+            
+            // Abilita lo scorrimento verticale in tutte le slide
+            var allSlides = document.querySelectorAll('.reveal .slides section');
+            allSlides.forEach(function(slide) {
+                // Assicura che lo scorrimento verticale funzioni
+                slide.style.overflow = 'auto';
+                slide.style.maxHeight = '100vh';
+                
+                // Aggiungi gestori eventi per lo scorrimento
+                slide.addEventListener('wheel', function(e) {
+                    // Permetti lo scorrimento verticale nativo
+                    e.stopPropagation();
+                });
+                
+                // Aggiungi gestori per lo scorrimento con tastiera
+                slide.addEventListener('keydown', function(e) {
+                    // Permetti lo scorrimento con frecce su/giù
+                    if (e.key === 'ArrowUp' || e.key === 'ArrowDown') {
+                        e.stopPropagation();
+                    }
+                });
+            });
+            
+            // Abilita lo scorrimento su mobile
+            if (window.innerWidth <= 768) {
+                // Disabilita la gestione degli eventi touch di Reveal.js su mobile
+                Reveal.configure({ touch: false });
+                
+                // Forza l'abilitazione dello scorrimento su tutte le slide
+                var slides = document.querySelectorAll('.reveal .slides section');
+                slides.forEach(function(slide) {
+                    slide.style.height = 'auto';
+                    slide.style.overflow = 'visible';
+                    slide.style.minHeight = 'auto';
+                    slide.style.position = 'relative';
+                    slide.style.top = '0';
+                    slide.style.transform = 'none';
+                });
+                
+                // Forza lo scorrimento su tutti i div con altezza fissa
+                var fixedHeightDivs = document.querySelectorAll('div[style*="height:"]');
+                fixedHeightDivs.forEach(function(div) {
+                    div.style.height = 'auto';
+                    div.style.minHeight = 'auto';
+                    div.style.maxHeight = 'none';
+                    div.style.overflow = 'visible';
+                });
+            }
+        }, 500);
+    </script>
+</body>
+</html>

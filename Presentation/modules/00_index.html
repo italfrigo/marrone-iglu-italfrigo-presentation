@@ -1,0 +1,145 @@
+<section>
+    <h2>Indice della Presentazione</h2>
+    <p>Clicca su una sezione per navigare direttamente a quella slide</p>
+    
+    <div class="index-container">
+        <div class="index-item" data-target="partnership">
+            <h3>1. Partnership di Eccellenza</h3>
+            <p>La forza della collaborazione Marrone-Iglu-Italfrigo</p>
+        </div>
+        
+        <div class="index-item" data-target="introduction">
+            <h3>2. Introduzione</h3>
+            <p>Panoramica delle soluzioni integrate</p>
+        </div>
+        
+        <div class="index-item" data-target="marrone">
+            <h3>3. Marrone Cucine Personalizzate</h3>
+            <p>Eccellenza italiana nella cottura professionale</p>
+        </div>
+        
+        <div class="index-item" data-target="iglu">
+            <h3>4. IGLU Sistemi di Refrigerazione</h3>
+            <p>Soluzioni di refrigerazione premium</p>
+        </div>
+        
+        <div class="index-item" data-target="italfrigo">
+            <h3>5. Italfrigo Service</h3>
+            <p>Il nostro servizio di eccellenza</p>
+        </div>
+        
+        <div class="index-item" data-target="technical">
+            <h3>6. Specifiche Tecniche</h3>
+            <p>Dettagli tecnici delle soluzioni proposte</p>
+        </div>
+        
+        <div class="index-item" data-target="realization">
+            <h3>7. Realizzazione</h3>
+            <p>Come realizzeremo il progetto</p>
+        </div>
+        
+        <div class="index-item" data-target="services">
+            <h3>8. Servizi e Offerta</h3>
+            <p>I nostri servizi e la nostra offerta</p>
+        </div>
+        
+        <div class="index-item" data-target="download">
+            <h3>9. Documenti Disponibili</h3>
+            <p>Scarica offerta e presentazione</p>
+        </div>
+        
+        <div class="index-item" data-target="final">
+            <h3>10. Valore della Partnership</h3>
+            <p>Perché scegliere la nostra collaborazione</p>
+        </div>
+        
+        <div class="index-item" data-target="thanks">
+            <h3>11. Contatti</h3>
+            <p>Informazioni e riferimenti</p>
+        </div>
+    </div>
+    
+    <div class="navigation-hint">
+        <p>Navigazione:</p>
+        <ul>
+            <li>← → : Naviga tra le sezioni principali</li>
+            <li>↑ ↓ : Approfondisci ogni sezione</li>
+            <li>ESC : Torna a questa pagina indice</li>
+        </ul>
+    </div>
+</section>
+
+<style>
+    .index-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 30px;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .index-item {
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 12px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        width: 220px;
+        margin-bottom: 10px;
+    }
+    
+    .index-item:hover {
+        background-color: rgba(50, 50, 50, 0.9);
+        transform: scale(1.05);
+    }
+    
+    .index-item h3 {
+        margin-top: 0;
+        color: #fff;
+    }
+    
+    .index-item p {
+        margin-bottom: 0;
+        color: #ccc;
+    }
+    
+    .navigation-hint {
+        margin-top: 40px;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 10px 20px;
+        border-radius: 10px;
+        display: inline-block;
+    }
+    
+    .navigation-hint ul {
+        list-style-type: none;
+        padding-left: 10px;
+    }
+    
+    .navigation-hint li {
+        margin: 5px 0;
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const indexItems = document.querySelectorAll('.index-item');
+        
+        indexItems.forEach(item => {
+            item.addEventListener('click', function() {
+                const target = this.getAttribute('data-target');
+                // Trova l'indice della sezione target
+                const sections = Array.from(document.querySelectorAll('.slides > section'));
+                const targetIndex = sections.findIndex(section => section.id === target);
+                
+                if (targetIndex !== -1) {
+                    // Naviga alla slide corrispondente
+                    Reveal.slide(targetIndex);
+                }
+            });
+        });
+    });
+</script>

@@ -1,0 +1,225 @@
+/* Custom styles for RH Corso Venezia presentation */
+
+/* Header styles */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 2rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    flex-shrink: 0;
+}
+
+.rh-logo {
+    width: 58px;
+    height: 55px;
+    fill: #fff;
+}
+
+.separator {
+    width: 1px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.3);
+    margin: 0 2rem;
+}
+
+.partner-logos {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.partner-logos img {
+    height: 40px;
+    width: auto;
+    filter: brightness(0) invert(1);
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.partner-logos img:hover {
+    opacity: 1;
+}
+
+/* Slide styles */
+.reveal .slides {
+    margin-top: 70px;
+}
+
+.title-slide {
+    text-align: center;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 2rem;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.content-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    transition: transform 0.3s ease;
+}
+
+.content-item:hover {
+    transform: translateY(-5px);
+}
+
+.content-columns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    margin: 2rem 0;
+}
+
+/* Typography */
+.reveal h1 {
+    font-size: 3.5em;
+    margin-bottom: 0.5em;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #fff;
+}
+
+.reveal h2 {
+    font-size: 2.5em;
+    margin-bottom: 1em;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.reveal h3 {
+    font-size: 1.8em;
+    color: #fff;
+    margin-bottom: 0.8em;
+    letter-spacing: 0.02em;
+}
+
+.reveal p {
+    font-size: 1.4em;
+    line-height: 1.6;
+    color: #fff;
+    margin-bottom: 1em;
+}
+
+.reveal ul {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #fff;
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 1em;
+}
+
+.reveal ul li {
+    margin-bottom: 0.8em;
+    padding-left: 1.5em;
+    position: relative;
+}
+
+.reveal ul li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #fff;
+}
+
+/* Section backgrounds */
+.reveal section[data-background] {
+    background-size: cover;
+    background-position: center;
+}
+
+.reveal section[data-background]:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .content-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .content-columns {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .partner-logos {
+        gap: 1rem;
+    }
+
+    .partner-logos img {
+        height: 30px;
+    }
+
+    .reveal h1 {
+        font-size: 2.5em;
+    }
+
+    .reveal h2 {
+        font-size: 2em;
+    }
+
+    .reveal h3 {
+        font-size: 1.5em;
+    }
+
+    .reveal p {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 768px) {
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .overlay {
+        max-width: 95%;
+        padding: 1.5rem;
+    }
+
+    .header {
+        padding: 0.5rem 1rem;
+    }
+
+    .separator {
+        margin: 0 1rem;
+    }
+
+    .partner-logos img {
+        height: 25px;
+    }
+}

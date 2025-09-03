@@ -1,0 +1,140 @@
+<section>
+    <h2>Presentation Index</h2>
+    <p>Click on a section to navigate directly to that slide</p>
+    
+    <div class="index-container">
+        <div class="index-item" data-target="introduction">
+            <h3>1. Introduction</h3>
+            <p>Overview of integrated solutions</p>
+        </div>
+        
+        <div class="index-item" data-target="marrone">
+            <h3>2. Marrone Custom Cooking</h3>
+            <p>Italian excellence in professional cooking</p>
+        </div>
+        
+        <div class="index-item" data-target="iglu">
+            <h3>3. IGLU Professional Refrigeration</h3>
+            <p>Premium refrigeration solutions</p>
+        </div>
+        
+        <div class="index-item" data-target="italfrigo">
+            <h3>4. Italfrigo Service</h3>
+            <p>Our excellence service</p>
+        </div>
+        
+        <div class="index-item" data-target="technical">
+            <h3>5. Technical Specifications</h3>
+            <p>Technical details of proposed solutions</p>
+        </div>
+        
+        <div class="index-item" data-target="realization">
+            <h3>6. Implementation</h3>
+            <p>How we will realize the project</p>
+        </div>
+        
+        <div class="index-item" data-target="services">
+            <h3>7. Services and Offer</h3>
+            <p>Our services and our offer</p>
+        </div>
+        
+        <div class="index-item" data-target="download">
+            <h3>8. Available Documents</h3>
+            <p>Download offer and presentation</p>
+        </div>
+        
+        <div class="index-item" data-target="final">
+            <h3>9. Partnership</h3>
+            <p>Value of the partnership</p>
+        </div>
+        
+        <div class="index-item" data-target="thanks">
+            <h3>10. Acknowledgments</h3>
+            <p>Contacts and information</p>
+        </div>
+    </div>
+    
+    <div class="navigation-hint">
+        <p>Navigation:</p>
+        <ul>
+            <li>← → : Navigate between main sections</li>
+            <li>↑ ↓ : Explore each section in depth</li>
+            <li>ESC : Return to this index page</li>
+        </ul>
+    </div>
+</section>
+
+<style>
+    .index-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 30px;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .index-item {
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 12px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        width: 220px;
+        margin-bottom: 10px;
+    }
+    
+    .index-item:hover {
+        background-color: rgba(50, 50, 50, 0.9);
+        transform: scale(1.05);
+    }
+    
+    .index-item h3 {
+        margin-top: 0;
+        color: #fff;
+    }
+    
+    .index-item p {
+        margin-bottom: 0;
+        color: #ccc;
+    }
+    
+    .navigation-hint {
+        margin-top: 40px;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 10px 20px;
+        border-radius: 10px;
+        display: inline-block;
+    }
+    
+    .navigation-hint ul {
+        list-style-type: none;
+        padding-left: 10px;
+    }
+    
+    .navigation-hint li {
+        margin: 5px 0;
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const indexItems = document.querySelectorAll('.index-item');
+        
+        indexItems.forEach(item => {
+            item.addEventListener('click', function() {
+                const target = this.getAttribute('data-target');
+                // Find the index of the target section
+                const sections = Array.from(document.querySelectorAll('.slides > section'));
+                const targetIndex = sections.findIndex(section => section.id === target);
+                
+                if (targetIndex !== -1) {
+                    // Navigate to the corresponding slide
+                    Reveal.slide(targetIndex);
+                }
+            });
+        });
+    });
+</script>
